@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		542A629C21119D1E000BA066 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 542A629B21119D1E000BA066 /* main.cpp */; };
+		542A62A92111A065000BA066 /* modern_cpp_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 542A62A82111A065000BA066 /* modern_cpp_test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,20 @@
 /* Begin PBXFileReference section */
 		542A629821119D1E000BA066 /* modern_cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = modern_cpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		542A629B21119D1E000BA066 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		542A62A62111A064000BA066 /* modern_cpp_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = modern_cpp_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		542A62A82111A065000BA066 /* modern_cpp_test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = modern_cpp_test.m; sourceTree = "<group>"; };
+		542A62AA2111A065000BA066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		542A629521119D1E000BA066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		542A62A32111A064000BA066 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				542A629A21119D1E000BA066 /* modern_cpp */,
+				542A62A72111A065000BA066 /* modern_cpp_test */,
 				542A629921119D1E000BA066 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				542A629821119D1E000BA066 /* modern_cpp */,
+				542A62A62111A064000BA066 /* modern_cpp_test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +73,15 @@
 				542A629B21119D1E000BA066 /* main.cpp */,
 			);
 			path = modern_cpp;
+			sourceTree = "<group>";
+		};
+		542A62A72111A065000BA066 /* modern_cpp_test */ = {
+			isa = PBXGroup;
+			children = (
+				542A62A82111A065000BA066 /* modern_cpp_test.m */,
+				542A62AA2111A065000BA066 /* Info.plist */,
+			);
+			path = modern_cpp_test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +104,23 @@
 			productReference = 542A629821119D1E000BA066 /* modern_cpp */;
 			productType = "com.apple.product-type.tool";
 		};
+		542A62A52111A064000BA066 /* modern_cpp_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 542A62AD2111A065000BA066 /* Build configuration list for PBXNativeTarget "modern_cpp_test" */;
+			buildPhases = (
+				542A62A22111A064000BA066 /* Sources */,
+				542A62A32111A064000BA066 /* Frameworks */,
+				542A62A42111A064000BA066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = modern_cpp_test;
+			productName = modern_cpp_test;
+			productReference = 542A62A62111A064000BA066 /* modern_cpp_test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +131,10 @@
 				ORGANIZATIONNAME = LVA;
 				TargetAttributes = {
 					542A629721119D1E000BA066 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					542A62A52111A064000BA066 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,9 +153,20 @@
 			projectRoot = "";
 			targets = (
 				542A629721119D1E000BA066 /* modern_cpp */,
+				542A62A52111A064000BA066 /* modern_cpp_test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		542A62A42111A064000BA066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		542A629421119D1E000BA066 /* Sources */ = {
@@ -120,6 +174,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				542A629C21119D1E000BA066 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		542A62A22111A064000BA066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542A62A92111A065000BA066 /* modern_cpp_test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +309,32 @@
 			};
 			name = Release;
 		};
+		542A62AB2111A065000BA066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8M8T7QQG92;
+				INFOPLIST_FILE = modern_cpp_test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lva.com.modern-cpp-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		542A62AC2111A065000BA066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8M8T7QQG92;
+				INFOPLIST_FILE = modern_cpp_test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lva.com.modern-cpp-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -264,6 +352,15 @@
 			buildConfigurations = (
 				542A62A021119D1E000BA066 /* Debug */,
 				542A62A121119D1E000BA066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		542A62AD2111A065000BA066 /* Build configuration list for PBXNativeTarget "modern_cpp_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				542A62AB2111A065000BA066 /* Debug */,
+				542A62AC2111A065000BA066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
