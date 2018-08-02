@@ -61,7 +61,7 @@ private:
 // MARK:- TESTS
 
 @interface sfinae_test : XCTestCase
-- (void)startTestWithName:(char*)theName;
+- (void)startTestWithName:(NSString*)theName;
 @end
 
 @implementation sfinae_test
@@ -77,14 +77,14 @@ private:
 	cout << "--------------------------------------------------------\n";
 }
 
-- (void)startTestWithName:(char*)theName
+- (void)startTestWithName:(NSString*)theName
 {
-	cout << " ->>> " << theName << " <<<-" << endl << endl;
+	cout << " ->>> " << theName.UTF8String << " <<<-" << endl << endl;
 }
 
 - (void)testPerson
 {
-	[self startTestWithName:"test : Person"];
+	[self startTestWithName:@"test : Person"];
 	
 	Person fromStringA("vitya");
 	XCTAssertTrue(fromStringA == "vitya");
@@ -104,7 +104,7 @@ private:
 
 - (void)test_function
 {
-	[self startTestWithName:"test : Function"];
+	[self startTestWithName:@"test : Function"];
 	
 	std::string s("AAAA");
 	auto  id = 10;
