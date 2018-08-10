@@ -26,7 +26,7 @@ constexpr auto toUType( E e ) noexcept {
 
 @implementation enum_test
 
-- (void)testExample
+- (void)testEnum
 {
 	enum class Color : short
 	{
@@ -35,6 +35,9 @@ constexpr auto toUType( E e ) noexcept {
 	
 	Color ec = Color::white;
 	auto  ac = Color::white;
+	
+	XCTAssertEqual(Color::white, ec);
+	XCTAssertEqual(Color::white, ac);
 	
 	// declaration
 	
@@ -52,6 +55,17 @@ constexpr auto toUType( E e ) noexcept {
 	auto name  = std::get< toUType(ATTR::NAME) >( a );
 	auto mail  = std::get< toUType(ATTR::MAIL) >( b );
 	auto index = std::get< toUType(ATTR::ID  ) >( a );
+	
+	XCTAssertEqual("Vitya", name);
+	XCTAssertEqual("olga@google.com", mail);
+	XCTAssertEqual(111, index);
+	
+	auto [aID, aSEX, aNAME, aMAIL] = a;
+	
+	XCTAssertEqual(111, aID);
+	XCTAssertEqual('M', aSEX);
+	XCTAssertEqual("Vitya", aNAME);
+	XCTAssertEqual("vitya@google.com", aMAIL);
 }
 
 @end
