@@ -29,14 +29,6 @@ decltype(auto) workAndAccess(Container&& c, Index i)
 	return std::forward<Container>(c)[i] ;
 }
 
-// C++17 - support lvalue and rvalue as a paramenter for container!
-template<typename Container, typename Index>
-auto handleAndAccess(Container&& c, Index i)
-{
-	// handle();
-	return std::forward<Container>(c)[i] ;
-}
-
 // Helper
 template<typename T> class TD;
 
@@ -128,7 +120,6 @@ auto getStringAutoCopyB()
 	
 	XCTAssertEqual( true, std::is_reference_v< decltype( processAndAccess(d, 2) ) > );
 	XCTAssertEqual( true, std::is_reference_v< decltype( workAndAccess(d, 3) ) > );
-	XCTAssertEqual( true, std::is_reference_v< decltype( workAndAccess(d, 4) ) > );
 	
 	XCTAssertEqual(30, d[2]);
 	processAndAccess(d, 2) = 15;
@@ -138,31 +129,22 @@ auto getStringAutoCopyB()
 	workAndAccess(d, 3) = 25;
 	XCTAssertEqual(25, d[3]);
 
-	XCTAssertEqual(50, d[4]);
-	workAndAccess(d, 4) = 35;
-	XCTAssertEqual(35, d[4]);
-
 	// TEST - r-value
 	
 	auto a = processAndAccess(makeContainer(), 2);
 	auto b = workAndAccess(makeContainer(), 3);
-	auto c = handleAndAccess(makeContainer(), 4);
 	
 	XCTAssertEqual( true, std::is_object_v< decltype( a ) > );
 	XCTAssertEqual( true, std::is_object_v< decltype( b ) > );
-	XCTAssertEqual( true, std::is_object_v< decltype( c ) > );
 	
 	XCTAssertEqual(30, a);
 	XCTAssertEqual(40, b);
-	XCTAssertEqual(50, c);
 	
 	a = 25;
 	b = 35;
-	c = 45;
 	
 	XCTAssertEqual(25, a);
 	XCTAssertEqual(35, b);
-	XCTAssertEqual(45, c);
 }
 
 @end
