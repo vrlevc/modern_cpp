@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#include <type_traits>
 #include <string>
 
 // MARK: -
@@ -75,17 +76,20 @@ auto getStringAutoCopyB()
 - (void)testErrorUsage
 {
 //	TD< decltype(getStringDecltypeReference()) > Fn;
+	XCTAssertEqual( true, std::is_reference_v< decltype(getStringDecltypeReference()) > );
 	NSLog(@" ->>> TD< decltype(getStringDecltypeReference()) > Fn;  => TD<std::string<char> &> - REFERENCE : ERROR!!!");
 	
 //	TD< decltype(getStringDecltypeCopy()) > Fn;
+	XCTAssertEqual( false, std::is_reference_v< decltype(getStringDecltypeCopy()) > );
 	NSLog(@" ->>> TD< decltype(getStringDecltypeCopy()) > Fn;  => TD<std::string<char> &> - COPY : GOOD");
 
 //	TD< decltype(getStringAutoCopyA()) > Fn;
+	XCTAssertEqual( false, std::is_reference_v< decltype(getStringAutoCopyA()) > );
 	NSLog(@" ->>> TD< decltype(getStringAutoCopyA()) > Fn;  => TD<std::string<char> &> - COPY : GOOD");
 	
 //	TD< decltype(getStringAutoCopyB()) > Fn;
+	XCTAssertEqual( false, std::is_reference_v< decltype(getStringAutoCopyB()) > );
 	NSLog(@" ->>> TD< decltype(getStringAutoCopyB()) > Fn;  => TD<std::string<char> &> - COPY : GOOD");
-	
 }
 
 - (void)testExample

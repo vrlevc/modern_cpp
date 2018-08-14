@@ -37,9 +37,6 @@ bool foo(T&& v)
 	return fooImpl( forward<T>(v), is_integral< remove_reference_t<T> >() );
 }
 
-template <class _Tp> 			constexpr bool is_integral_v = is_integral<_Tp>::value;
-template <class _Bp, class _Dp> constexpr bool is_base_of_v  = is_base_of<_Bp, _Dp>::value;
-
 class Person : public string
 {
 public:
