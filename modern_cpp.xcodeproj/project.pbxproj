@@ -18,6 +18,7 @@
 		542A62B32111C5C5000BA066 /* overload_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 542A62B22111C5C5000BA066 /* overload_test.mm */; };
 		542A62B52111C69D000BA066 /* smart_pointers_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 542A62B42111C69D000BA066 /* smart_pointers_test.mm */; };
 		542A62B72112DC68000BA066 /* sfinae_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 542A62B62112DC68000BA066 /* sfinae_test.mm */; };
+		542F62652178E9CF00192C16 /* closure_32_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 542F62642178E9CF00192C16 /* closure_32_test.mm */; };
 		546EE147215A0EDD000C118B /* pimpl_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 546EE146215A0EDD000C118B /* pimpl_test.mm */; };
 		54A281FD211D5E6000D9073D /* enum_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54A281FC211D5E6000D9073D /* enum_test.mm */; };
 		54A281FF211D666B00D9073D /* tuple_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54A281FE211D666B00D9073D /* tuple_test.mm */; };
@@ -51,6 +52,7 @@
 		542A62B22111C5C5000BA066 /* overload_test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = overload_test.mm; sourceTree = "<group>"; };
 		542A62B42111C69D000BA066 /* smart_pointers_test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = smart_pointers_test.mm; sourceTree = "<group>"; };
 		542A62B62112DC68000BA066 /* sfinae_test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = sfinae_test.mm; sourceTree = "<group>"; };
+		542F62642178E9CF00192C16 /* closure_32_test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = closure_32_test.mm; sourceTree = "<group>"; };
 		546EE146215A0EDD000C118B /* pimpl_test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = pimpl_test.mm; sourceTree = "<group>"; };
 		54A281FC211D5E6000D9073D /* enum_test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = enum_test.mm; sourceTree = "<group>"; };
 		54A281FE211D666B00D9073D /* tuple_test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = tuple_test.mm; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				5415C01E2122AE0400B26BBE /* decltype_test.mm */,
 				5415C2EA2123F49500B26BBE /* variadic_test.mm */,
 				546EE146215A0EDD000C118B /* pimpl_test.mm */,
+				542F62642178E9CF00192C16 /* closure_32_test.mm */,
 			);
 			path = modern_cpp_test;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				542A62B32111C5C5000BA066 /* overload_test.mm in Sources */,
 				542A62AF2111C1BF000BA066 /* thread_test.mm in Sources */,
+				542F62652178E9CF00192C16 /* closure_32_test.mm in Sources */,
 				546EE147215A0EDD000C118B /* pimpl_test.mm in Sources */,
 				54A281FF211D666B00D9073D /* tuple_test.mm in Sources */,
 				54A281FD211D5E6000D9073D /* enum_test.mm in Sources */,
